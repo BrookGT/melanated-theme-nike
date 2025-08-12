@@ -64,9 +64,7 @@ export default function Hero() {
 
     useEffect(() => {
         if (paused) return;
-        if (timerRef.current) {
-            clearInterval(timerRef.current);
-        }
+        if (timerRef.current) clearInterval(timerRef.current);
         timerRef.current = setInterval(() => {
             setIndex((i) => (i + 1) % total);
         }, AUTO_MS);

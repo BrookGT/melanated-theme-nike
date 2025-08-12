@@ -40,7 +40,6 @@ export default function PromoBar() {
                     role="region"
                     aria-label="Promotion: First purchase discount"
                 >
-                    {/* Light sweep */}
                     <motion.div
                         aria-hidden="true"
                         className="pointer-events-none absolute inset-y-0 -left-1 w-1/3 opacity-25 mix-blend-screen"
