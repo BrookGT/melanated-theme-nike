@@ -88,7 +88,7 @@ export default function Hero() {
             onBlur={() => setPaused(false)}
         >
             <div
-                className="relative aspect-[16/9] w-full min-h-[60svh] sm:min-h-[70svh] lg:min-h-[80svh]"
+                className="relative aspect-[16/9] w-full min-h-[60svh] sm:min-h-[66svh] lg:min-h-[68svh]"
                 tabIndex={0}
                 onKeyDown={(e) => {
                     if (e.key === "ArrowRight") next();
@@ -109,9 +109,15 @@ export default function Hero() {
                             alt={current.headline}
                             fill
                             priority
-                            className="object-cover"
+                            className="object-cover lg:object-contain"
                         />
-                        <div className="absolute inset-0 [background:radial-gradient(100%_60%_at_10%_90%,rgba(0,0,0,0.45),transparent),linear-gradient(120deg,rgba(0,0,0,0.55),transparent_40%)]" />
+                        <div
+                            className="absolute inset-0"
+                            style={{
+                                background:
+                                    "radial-gradient(100% 60% at 10% 90%, rgba(0,0,0,0.45), transparent), linear-gradient(120deg, rgba(0,0,0,0.55), transparent 40%), radial-gradient(120% 60% at 90% 10%, rgba(255,215,0,0.08), transparent)",
+                            }}
+                        />
                     </motion.div>
                 </AnimatePresence>
 

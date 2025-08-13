@@ -74,6 +74,26 @@
     }
 }
 
+/* Marquee keyframes for continuous horizontal scroll (used by SocialCarousel) */
+@keyframes scroll-x {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Continuous horizontal scroll (marquee) for the social carousel */
+@keyframes scroll-x {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 @theme inline {
     /* optional: --font-sans, --font-serif, --font-mono if they are applied in the layout.tsx */
     --color-background: var(--background);
